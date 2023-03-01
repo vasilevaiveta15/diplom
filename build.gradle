@@ -1,0 +1,25 @@
+plugins {
+    id 'org.springframework.boot' version('2.1.6.RELEASE')
+    id 'java'
+}
+
+apply plugin: 'io.spring.dependency-management'
+
+group 'org.example'
+version '0.0.1-SNAPSHOT'
+sourceCompatibility = '1.8'
+
+repositories {
+    mavenCentral()
+}
+
+dependencies {
+    implementation 'org.springframework.boot:spring-boot-starter-web'
+    implementation 'mysql:mysql-connector-java:8.0.13'
+    testImplementation 'org.junit.jupiter:junit-jupiter-api:5.7.0'
+    testRuntimeOnly 'org.junit.jupiter:junit-jupiter-engine:5.7.0'
+}
+
+test {
+    useJUnitPlatform()
+}
